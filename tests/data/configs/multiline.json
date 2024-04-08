@@ -1,0 +1,18 @@
+{
+  "tokens": [
+    "timestamp",
+    "process",
+    "message",
+    "error_msg",
+    "action",
+    "status"
+  ],
+  "patterns": [
+    "timestamp :: process - message",
+    "timestamp :: process - status\n    -> error_msg",
+    "timestamp :: process - status\n    -> error_msg\n    -> action"
+  ],
+  "lexemes": {
+    "timestamp": "\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}"
+  }
+}
